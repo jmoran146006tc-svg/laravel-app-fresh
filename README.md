@@ -19,7 +19,7 @@ npm install
 Copy the example environment file:
 
 ```bash
-cp .env.example .env
+copy .env.example .env
 ```
 
 Then open `.env` and configure your database and other settings if needed.
@@ -163,12 +163,109 @@ Route::get('/contact', function () {
 ```
 ---
 
+# Activity 2: Forms in Laravel
+
+## Objective
+In this activity, you will practice handling **forms, POST requests, and session data** in Laravel.
+
+By the end of this activity, you should be able to:
+- Create a form using Blade
+- Handle form submissions using routes
+- Store data in session
+- Display stored data dynamically
+
+---
+
+## Given Code Overview
+
+You are provided with:
+- A route that handles GET and POST requests
+- A Blade form view that submits email input
+
+---
+
+## Tasks
+
+### Task 1: Understand the Flow
+Trace how the form works:
+1. User enters email
+2. Form submits via POST
+3. Email is stored in session
+4. Page reloads and displays saved emails
+
+Write a short explanation (3–5 sentences) of this flow.
+
+---
+
+### Task 2: Add Validation
+Modify the POST route to:
+- Reject empty input
+- Reject invalid email format
+
+Hint:
+Use `request()->validate([...])`
+
+---
+
+### Task 3: Prevent Duplicate Emails
+Update the logic so:
+- The same email cannot be added twice
+
+Hint:
+Check the session array before pushing.
+
+---
+
+### Task 4: Add Delete Button Per Email
+Instead of deleting all emails:
+- Add a **Delete button beside each email**
+- Remove only the selected email
+
+Challenge:
+You will need to:
+- Pass index or value
+- Create a new POST/DELETE route
+
+---
+
+### Task 5: Improve UI Feedback
+Add:
+- Success message after adding email
+- Error message if validation fails
+
+Hint:
+Use session flash messages
+
+---
+
+### Task 6: Limit Entries
+- Allow only **5 emails maximum**
+- Show a warning if limit is reached
+
+---
+
+## Reflection Questions
+
+Answer the following:
+
+1. What is the difference between GET and POST?
+2. Why do we use `@csrf` in forms?
+3. What is session used for in this activity?
+4. What happens if session is cleared?
+---
+## Submission Instructions
+1. For the reflection answers, put your answers in a .md file.
+2. In the root directory, create a new file and name it Surname_Answers.md
+3. You may install readme-preview vscode extension so you may see the preview of the markdown file.
+4. Have fun this Holy Work.
+---
+
 ## Notes for Students
 
-* Feel free to modify the code and experiment.
-* Breaking things is part of learning—don’t be afraid to try.
-* If something stops working, you can always re-clone the project.
-* Make sure your database is properly configured in `.env`.
+- Feel free to modify the code and experiment  
+- Breaking things is part of learning—don’t be afraid to try  
+- If something stops working, you can always re-clone the project  
+- Make sure your database is properly configured in `.env`  
 
 ---
 
@@ -176,7 +273,7 @@ Route::get('/contact', function () {
 
 Laravel is a web application framework with expressive, elegant syntax. It simplifies common tasks like routing, authentication, and database management.
 
-For full documentation, visit: [https://laravel.com/docs](https://laravel.com/docs)
+Documentation: https://laravel.com/docs
 
 ---
 
