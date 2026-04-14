@@ -6,6 +6,9 @@ use App\Models\Ideas;
 use App\Models\User;
 use App\Models\Post;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BookController;
+
+Route::resource('books', BookController::class);
 
 Route::view('/', 'welcome', [
     'greeting' => 'Hello, World!',
